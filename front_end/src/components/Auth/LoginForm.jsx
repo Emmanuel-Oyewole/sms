@@ -1,4 +1,4 @@
-import React, { useState } from "react";
+import  { useState } from "react";
 import { useAuth } from "../../hooks/UseAuth";
 
 const LoginForm = () => {
@@ -12,7 +12,7 @@ const LoginForm = () => {
     try {
       await login(username, password);
     } catch (error) {
-      setError("Failed to login");
+      setError("Failed to login: " + error);
     }
   };
     return (
